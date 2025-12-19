@@ -13,7 +13,13 @@ dotenv.config()
 const app = express();
 const port = process.env.PORT || 8000  
 
-app.use(cors())
+app.use(cors({
+    origin: [
+        "http://localhost:5173",          
+        process.env.FRONTEND_URL || "https://assignment-brown-pi.vercel.app" // production
+    ],
+    credentials: true
+}))
 app.use(express.json())
 
 
