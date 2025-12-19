@@ -5,7 +5,7 @@ import ContactForm from './components/landing/ContactForm'
 import ProjectCard from './components/landing/ProjectCard'
 import ProjectsSection from './components/sections/ProjectsSection'
 import ClientsSection from './components/sections/ClientsSection'
-import Newsletter from './components/sections/Newsletter'
+import NewsLetter from './components/sections/NewsLetter'
 import AdminDashboard from './components/admin/AdminDashboard'
 import AddProject from './components/admin/AddProject'
 import ShowProjects from './components/admin/ShowProjects'
@@ -23,7 +23,7 @@ function App() {
         <Route path='/contact' element={<ContactForm/>} />
         <Route path='/project' element={<ProjectsSection/>} />
         <Route path='/client' element={<ClientsSection/>} />
-        <Route path='/news' element={<Newsletter/>} />
+        <Route path='/news' element={<NewsLetter/>} />
 
 
         <Route path='/admin' element={<AdminDashboard/>} />
