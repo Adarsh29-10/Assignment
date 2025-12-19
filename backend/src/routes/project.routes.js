@@ -1,0 +1,36 @@
+import express from 'express'
+import { Project } from '../models/Project.model.js';
+
+const router = express.Router();
+
+router.post('/new', async (req, res) => {
+  try {
+    const { image, name, description } = req.body;
+
+    // Validation
+    if (!image || !name || !description) {
+      return res.status(400).json({
+        message: 'All fields are required'
+      });
+    }
+
+    const project = await Project.create({
+      image,
+      name,
+      description
+    });
+
+    return res.status(201).json({
+      message: 'Project added successfully',
+      project
+    });
+
+  } catch (error) {
+    return res.status(500).json({
+      message: 'Server error',
+      error: error.message
+    });
+  }
+});
+
+export default router
