@@ -5,6 +5,8 @@ import CONNECT_DB from './src/db/index.js'
 
 import projectRouter from './src/routes/project.routes.js'
 import clientRouter from './src/routes/client.routes.js'
+import contactRouter from './src/routes/contact.routes.js'
+import newsletterRouter from './src/routes/newsletter.routes.js'
 
 dotenv.config()
 
@@ -17,6 +19,8 @@ app.use(express.json())
 
 app.use('/api/project', projectRouter)
 app.use('/api/client', clientRouter)
+app.use('/api/contact', contactRouter)
+app.use('/api/newsletter', newsletterRouter)
 
 
 CONNECT_DB()
