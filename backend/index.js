@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import CONNECT_DB from './src/db/index.js'
 
 import projectRouter from './src/routes/project.routes.js'
+import clientRouter from './src/routes/client.routes.js'
 
 dotenv.config()
 
@@ -13,8 +14,9 @@ const port = process.env.PORT || 8000
 app.use(cors())
 app.use(express.json())
 
-    
+
 app.use('/api/project', projectRouter)
+app.use('/api/client', clientRouter)
 
 
 CONNECT_DB()
