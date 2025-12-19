@@ -1,54 +1,10 @@
 import express from 'express'
-import { Project } from '../models/Project.model.js';
+import { addProject, getProjects } from '../controllers/project.controller.js';
 
 const router = express.Router();
 
-router.post('/new', async (req, res) => {
+router.post('/', addProject);
 
-    try {
-        const { image, name, description } = req.body;
-
-        if (!image || !name || !description) {
-            return res.status(400).json({
-                message: 'All fields are required'
-            });
-        }
-
-        const project = await Project.create({
-            image,
-            name,
-            description
-        });
-
-        return res.status(201).json({
-            message: 'Project added successfully',
-            project
-        });
-
-    } 
-    catch (error) {
-        return res.status(500).json({
-            message: 'Server error',
-            error: error.message
-        });
-    }
-});
-
-router.get('/', async (req, res)=>{
-    try{
-        const projects = await Project.find();
-
-        return res.status(200).json({
-            message: "Projects fetched successfully.",
-            projects
-        })
-    } 
-    catch(error){
-        return res.status(500).json({
-            message: 'Server error',
-            error: error.message
-        })
-    }
-})
+router.get('/', getProjects)
 
 export default router
