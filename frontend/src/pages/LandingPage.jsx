@@ -3,7 +3,7 @@ import Navbar from "../components/common/Navbar";
 import ContactForm from "../components/landing/ContactForm";
 import ProjectsSection from "../components/sections/ProjectsSection";
 import ClientsSection from "../components/sections/ClientsSection";
-import Newsletter from "../components/sections/NewsLetter";
+import Newsletter from "../components/sections/Newsletter";
 
 const LandingPage = () => {
     const features = [
