@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import API from '../../services/api.js';
 
-const NewsLetter = () => {
+const NewsLetterSection = () => {
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
@@ -74,4 +74,4 @@ const NewsLetter = () => {
     );
 };
 
-export default NewsLetter;
+export default NewsLetterSection;
