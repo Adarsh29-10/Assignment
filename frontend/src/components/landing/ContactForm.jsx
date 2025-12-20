@@ -58,17 +58,17 @@ const ContactForm = () => {
         <div className="absolute inset-0 bg-black/30"></div>
 
             {/* Parent Flex Container */}
-            <div className="relative w-full flex items-center max-w-6xl mx-auto">
+            <div className="relative w-full flex flex-col md:flex-row items-center max-w-6xl mx-auto">
                 
                 {/* Left Div - Text */}
-                <div className="w-1/2 text-white px-8">
-                    <h1 className="text-5xl font-bold leading-tight">
+                <div className="w-full md:w-1/2 text-white px-8 text-center md:text-left mb-8 md:mb-0">
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                         Consultation,<br />Design,<br />& Marketing
                     </h1>
                 </div>
 
                 {/* Right Div - Form */}
-                <div className="w-1/2 flex justify-center px-8">
+                <div className="w-full md:w-1/2 flex justify-center px-8">
                     <div className="bg-[#53618B] p-8 rounded-lg w-full max-w-md shadow-2xl">
 
                         <h2 className="text-white text-3xl font-bold text-center mb-8">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import API from '../../services/api.js'
-import ProjectCard from '../landing/ProjectCard';
+import ProjectCard from '../landing/ProjectCard.jsx';
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
