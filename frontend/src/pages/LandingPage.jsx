@@ -10,7 +10,7 @@ import LearnMoreSection from "../components/sections/LearnMoreSection";
 
 const LandingPage = () => {
     return (
-        <main className="landing-pag overflow-x-hidden">
+        <main className="overflow-x-hidden">
             <header className="landing-header">
                 <Navbar />
             </header>

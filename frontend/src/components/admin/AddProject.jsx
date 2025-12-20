@@ -51,7 +51,7 @@ const AddProject = () => {
                 {/* Header */}
                 <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Add New Project</h2>
-                <p className="text-gray-500 text-sm">Create a new real estate project listing</p>
+                <p className="text-gray-500 text-sm">Create a new project listing</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
