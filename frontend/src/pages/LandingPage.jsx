@@ -3,7 +3,7 @@ import Navbar from "../components/common/Navbar";
 import ContactForm from "../components/landing/ContactForm";
 import ProjectsSection from "../components/sections/ProjectsSection";
 import ClientsSection from "../components/sections/ClientsSection";
-import Newsletter from "../components/sections/NewsLetter";
+import NewsLetter from "../components/sections/NewsLetter";
 import DescriptionSection from "../components/sections/DescriptionSection";
 import WhySection from "../components/sections/WhySection";
 import LearnMoreSection from "../components/sections/LearnMoreSection";
@@ -68,7 +68,7 @@ const LandingPage = () => {
             </section>
 
             {/* newsletter section */}
-            <Newsletter />
+            <NewsLetter />
         </main>
     );
 };
